@@ -1,0 +1,24 @@
+{
+	"codeLens.enable": true,
+	"diagnostic.errorSign": "❗",
+	"diagnostic.warningSign": "⚠️",
+	"diagnostic.infoSign": "ℹ️",
+	"diagnostic.hintSign": "💡",
+	"languageserver": {
+		"clangd": {
+			"command": "clangd",
+			"args": ["--background-index"],
+			"trace.server": "verbose",
+			"rootPatterns": ["compile_commands.json"],
+			"filetypes": ["c", "cpp", "objc", "objcpp"]
+		},
+		"cmake": {
+			"command": "cmake-language-server",
+			"filetypes": ["cmake"],
+			"rootPatterns": ["build/"],
+			"initializationOptions": {
+				"buildDirectory": "build"
+			}
+		}
+    }
+}
